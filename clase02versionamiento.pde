@@ -7,6 +7,11 @@ float velY;
 // Variables para el tamaño de la pelota
 float diametro = 50;
 
+// Variables para el cuadrado
+float xCuadrado = 200; // Posición X fija
+float yCuadrado = 400; // Posición Y fija
+float ladoCuadrado = 70;
+
 void setup() {
   // Configura el tamaño del lienzo
   size(800, 600);
@@ -24,6 +29,7 @@ void draw() {
   // Pinta el fondo en cada frame para borrar el rastro
   background(220);
   
+  // --- Lógica de la Pelota ---
   // Mueve la pelota
   x = x + velX;
   y = y + velY;
@@ -39,5 +45,11 @@ void draw() {
   }
   
   // Dibuja la pelota
+  fill(255, 0, 0); // Color rojo para la pelota
   ellipse(x, y, diametro, diametro);
+  
+  // --- Lógica del Cuadrado (sin movimiento) ---
+  // Dibuja el cuadrado en su posición fija
+  fill(0, 0, 255); // Color azul para el cuadrado
+  rect(xCuadrado, yCuadrado, ladoCuadrado, ladoCuadrado);
 }
