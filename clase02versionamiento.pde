@@ -5,6 +5,7 @@ float velX;
 float velY;
 
 // comentario para commit 
+// segundo comentario
 
 // Variables para el tamaño de la pelota
 float diametro = 50;
